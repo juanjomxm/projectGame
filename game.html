@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Game</title>
+</head>
+<body>
+
+    <h1>GAME</h1>
+
+    <section id="select-player">
+
+        <h2>Elige tu jugador</h2>
+
+        <input id="player-one" type="radio" name="player">
+        <label for="player-one">AANG
+            <img 
+            src="https://th.bing.com/th/id/R.27f08d59924bf6c3ea96b4588f88b501?rik=xGqSki4BXxDEUA&riu=http%3a%2f%2fwww.absoluteanime.com%2favatar_the_last_airbender%2faang%5b2%5d.jpg&ehk=wxPH2H8TgNuwzWsYOVAHxgnuNzPVtWni4lWKMCxkYHk%3d&risl=&pid=ImgRaw&r=0"
+            width="300"
+            height="300"
+            >
+        </label>
+
+        <input id="player-two" type="radio" name="player">
+        <label for="player-two">KATARA
+            <img 
+            src="https://th.bing.com/th/id/OIP.kicYAu2gbuXN7R6HkS1yHAHaGq?pid=ImgDet&rs=1"
+            width="300"
+            height="300"
+            >
+        </label>
+
+        <input id="player-three" type="radio" name="player">
+        <label for="player-three">TOPH
+            <img 
+            src="https://static3.srcdn.com/wordpress/wp-content/uploads/2020/01/Toph-Avatar-Featured.jpg"
+            width="300"
+            height="300"
+            >
+        </label>
+        <p id="paragraph-select-player"></p>
+        <p id="paragraph-select-player-pc"></p>
+        <button onclick="selectPlayer()" id="button-select-player">SELECT</button>
+
+    </section>
+    
+</body>
+<script src="./game.js"></script>
+</html>

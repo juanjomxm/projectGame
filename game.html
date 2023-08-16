@@ -10,7 +10,6 @@
     <h1>GAME</h1>
 
     <section id="select-player">
-
         <h2>Elige tu jugador</h2>
 
         <input id="player-one" type="radio" name="player">
@@ -40,9 +39,25 @@
             >
         </label>
         <p id="paragraph-select-player"></p>
-        <p id="paragraph-select-player-pc"></p>
+        <p id="paragraph-select-pc"></p>
         <button onclick="selectPlayer()" id="button-select-player">SELECT</button>
+    </section>
 
+    <section>
+        <h2>COMBATE</h2>
+        <h3>SELECCIONAR ATAQUE</h3>
+
+        <button onclick="attackAir()">AIRE CONTROL😶‍🌫️</button>
+        <button onclick="attackFire()">FUEGO CONTROL🍁</button>
+        <button onclick="attackEarth()">TIERRA CONTROL🪨</button>
+        <button onclick="attackWater()">AGUA CONTROL🥏</button>
+
+        <p id="paragraph-attack-player"></p>
+        <p id="paragraph-attack-pc"></p>
+    </section>
+
+    <section id="messages-combat">
+        <p id="messages-combat-result"></p>
     </section>
     
 </body>

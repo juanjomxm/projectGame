@@ -44,16 +44,17 @@ button{
     justify-content: center;
 }
 
-#button-attack{
-    display: flex;
-    justify-content: space-evenly;
-    border-color: transparent;
-    color: green;
-}
-
 #button-select-player{
     display: flex;
     justify-content: center;
+    border-color: transparent;
+    color: green;
+    margin-top: 10px;
+}
+
+#button-attack{
+    display: flex;
+    justify-content: space-evenly;
     border-color: transparent;
     color: green;
 }
@@ -64,4 +65,8 @@ button{
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
+}
+
+#combat{
+    margin-top: 40px;
 }

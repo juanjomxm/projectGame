@@ -3,7 +3,7 @@ function aleatory(min, max){
 }
 
 let attackPlayer
-const attackPlayerText = document.getElementById('paragraph-attack-player')
+let attackPlayerText = document.getElementById('paragraph-attack-player')
 
 let attackPc 
 const attackPcText = document.getElementById('paragraph-attack-pc')
@@ -42,24 +42,52 @@ function selectPlayerPc(){
     }
 }
 
+const imgsAttacks = [
+    {name: 'air-control', src: 'https://th.bing.com/th/id/R.cbf38fb715dcc27f760f34ed022cf041?rik=q9Ti412YPC1DyQ&pid=ImgRaw&r=0' },
+    {name: 'fair', src: 'https://media.giphy.com/media/a3BSVQ00oj2kU/giphy.gif'},
+    {name: 'earth', src: 'https://th.bing.com/th/id/R.ed02aff4edf4370752a35175b338d0fa?rik=9mgSR9EgZh%2bUTg&riu=http%3a%2f%2fpa1.narvii.com%2f7073%2f1c658717ff08548efb5e82f388e85b66ea1bfaacr1-320-240_00.gif&ehk=XsZZsacrDlhGnCMo9l6hNfWTh0R3NhDTZ2AKN%2b4jDRY%3d&risl=&pid=ImgRaw&r=0'},
+    {name: 'water', src: 'https://pa1.narvii.com/6786/157f6ae2dff9316deedacc61ff1ef995079aa012_hq.gif'}
+]
+
+
 function attackAir(){
-    attackPlayer = 'AIRE' //.innerText = 'Atacaste con Aire control'
-    attackPlayerText.innerText = 'Atacaste con Aire control'
+    attackPlayer = 'AIRE'
+    imgsAttacks.filter(item => {
+        return item.name.includes('air-control')
+    })
+    .map(item =>{
+        return attackPlayerText.src = item.src
+    })
     selectAttackPc()
 }
 function attackFire(){
-    attackPlayer = 'FUEGO' //.innerText = 'Atacaste con Fuego control'
-    attackPlayerText.innerText = 'Atacaste con Fuego control'
+    attackPlayer = 'FUEGO'
+    imgsAttacks.filter(item => {
+        return item.name.includes('fair')
+    })
+    .map(item =>{
+        return attackPlayerText.src = item.src
+    })
     selectAttackPc()
 }
 function attackEarth(){
-    attackPlayer = 'TIERRA' //.innerText = 'Atacaste con Tierra control'
-    attackPlayerText.innerText = 'Atacaste con Tierra control'
+    attackPlayer = 'TIERRA' 
+    imgsAttacks.filter(item => {
+        return item.name.includes('earth')
+    })
+    .map(item =>{
+        return attackPlayerText.src = item.src
+    })
     selectAttackPc()
 }
 function attackWater(){
-    attackPlayer = 'AGUA' //.innerText = 'Atacaste con Agua control'
-    attackPlayerText.innerText = 'Atacaste con Agua control'
+    attackPlayer = 'AGUA'
+    imgsAttacks.filter(item => {
+        return item.name.includes('water')
+    })
+    .map(item =>{
+        return attackPlayerText.src = item.src
+    })
     selectAttackPc()
 }
 
@@ -68,16 +96,36 @@ function selectAttackPc(){
 
     if(attackAleatory === 1){
         attackPc = 'AIRE'
-        attackPcText.innerText = 'Tu oponente ataco con Aire control'
+        imgsAttacks.filter(item => {
+            return item.name.includes('air-control')
+        })
+        .map(item =>{
+            return attackPcText.src = `${item.src}`
+        })
     } else if(attackAleatory === 2){
         attackPc = 'FUEGO'
-        attackPcText.innerText = 'Tu oponente ataco con Fuego control'
+        imgsAttacks.filter(item => {
+            return item.name.includes('fair')
+        })
+        .map(item =>{
+            return attackPcText.src = item.src
+        })
     } else if(attackAleatory === 3){
         attackPc = 'TIERRA'
-        attackPcText.innerText = 'Tu oponente ataco con Tierra control'
+        imgsAttacks.filter(item => {
+            return item.name.includes('earth')
+        })
+        .map(item =>{
+            return attackPcText.src = item.src
+        })
     } else if(attackAleatory === 4){
         attackPc = 'AGUA'
-        attackPcText.innerText = 'Tu oponente ataco con Agua control'
+        imgsAttacks.filter(item => {
+            return item.name.includes('water')
+        })
+        .map(item =>{
+            return attackPcText.src = item.src
+        })
     }
     combatFinal()
 }
@@ -92,6 +140,8 @@ function combatFinal(){
     } else if(attackPlayer == 'FUEGO' && attackPc == 'TIERRA'){
         pResultFinal.innerHTML = 'GANASTE'
     } else if(attackPlayer == 'TIERRA' && attackPc == 'AGUA'){
+        pResultFinal.innerHTML = 'GANASTE'
+    } else if(attackPlayer == 'AGUA' && attackPc == 'FUEGO'){
         pResultFinal.innerHTML = 'GANASTE'
     } else{
         pResultFinal.innerHTML = 'PERDISTE'

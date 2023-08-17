@@ -9,57 +9,78 @@
 
     <h1>GAME</h1>
 
-    <section id="select-player">
+    <section>
         <h2>Elige tu jugador</h2>
 
-        <input id="player-one" type="radio" name="player">
-        <label for="player-one">AANG
-            <img 
-            src="https://th.bing.com/th/id/R.27f08d59924bf6c3ea96b4588f88b501?rik=xGqSki4BXxDEUA&riu=http%3a%2f%2fwww.absoluteanime.com%2favatar_the_last_airbender%2faang%5b2%5d.jpg&ehk=wxPH2H8TgNuwzWsYOVAHxgnuNzPVtWni4lWKMCxkYHk%3d&risl=&pid=ImgRaw&r=0"
-            width="300"
-            height="300"
-            >
-        </label>
+        <div id="select-player">
+            <input id="player-one" type="radio" name="player">
+            <label for="player-one">AANG
+                <img 
+                src="https://th.bing.com/th/id/R.27f08d59924bf6c3ea96b4588f88b501?rik=xGqSki4BXxDEUA&riu=http%3a%2f%2fwww.absoluteanime.com%2favatar_the_last_airbender%2faang%5b2%5d.jpg&ehk=wxPH2H8TgNuwzWsYOVAHxgnuNzPVtWni4lWKMCxkYHk%3d&risl=&pid=ImgRaw&r=0"
+                width="300"
+                height="300"
+                >
+            </label>
 
-        <input id="player-two" type="radio" name="player">
-        <label for="player-two">KATARA
-            <img 
-            src="https://th.bing.com/th/id/OIP.kicYAu2gbuXN7R6HkS1yHAHaGq?pid=ImgDet&rs=1"
-            width="300"
-            height="300"
-            >
-        </label>
+            <input id="player-two" type="radio" name="player">
+            <label for="player-two">KATARA
+                <img 
+                src="https://th.bing.com/th/id/OIP.kicYAu2gbuXN7R6HkS1yHAHaGq?pid=ImgDet&rs=1"
+                width="300"
+                height="300"
+                >
+            </label>
 
-        <input id="player-three" type="radio" name="player">
-        <label for="player-three">TOPH
-            <img 
-            src="https://static3.srcdn.com/wordpress/wp-content/uploads/2020/01/Toph-Avatar-Featured.jpg"
-            width="300"
-            height="300"
-            >
-        </label>
+            <input id="player-three" type="radio" name="player">
+            <label for="player-three">TOPH
+                <img 
+                src="https://static3.srcdn.com/wordpress/wp-content/uploads/2020/01/Toph-Avatar-Featured.jpg"
+                width="300"
+                height="300"
+                >
+            </label>
+
+            <input id="player-four" type="radio" name="player">
+            <label for="player-four">ZUKO
+                <img 
+                src="https://th.bing.com/th/id/R.97ccd05a8a6f90c803ee79bf0be2fe1c?rik=y1o1LnC2%2f8nlEQ&pid=ImgRaw&r=0"
+                width="300"
+                height="300"
+                >
+            </label>
+        </div>
+
         <p id="paragraph-select-player"></p>
         <p id="paragraph-select-pc"></p>
-        <button onclick="selectPlayer()" id="button-select-player">SELECT</button>
+
+        <div id="button-select-player">
+            <button onclick="selectPlayer()">SELECT</button>
+        </div>
+
     </section>
 
     <section>
         <h2>COMBATE</h2>
         <h3>SELECCIONAR ATAQUE</h3>
+        
+        <div id="button-attack">
+            <button onclick="attackAir()">AIRE CONTROL😶‍🌫️</button>
+            <button onclick="attackFire()">FUEGO CONTROL🍁</button>
+            <button onclick="attackEarth()">TIERRA CONTROL🪨</button>
+            <button onclick="attackWater()">AGUA CONTROL🥏</button>
+        </div>
 
-        <button onclick="attackAir()">AIRE CONTROL😶‍🌫️</button>
-        <button onclick="attackFire()">FUEGO CONTROL🍁</button>
-        <button onclick="attackEarth()">TIERRA CONTROL🪨</button>
-        <button onclick="attackWater()">AGUA CONTROL🥏</button>
-
-        <p id="paragraph-attack-player"></p>
-        <p id="paragraph-attack-pc"></p>
+        <!-- <p id="paragraph-attack-player"></p>
+        <p id="paragraph-attack-pc"></p> -->
     </section>
 
     <section id="messages-combat">
+        <p id="paragraph-attack-player"></p>
+        <p id="paragraph-attack-pc"></p>
         <p id="messages-combat-result"></p>
     </section>
     
 </body>
 <script src="./game.js"></script>
+<link rel="stylesheet" href="./game.css">
 </html>

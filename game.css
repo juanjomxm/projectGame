@@ -1,0 +1,67 @@
+h1, h2, h3{
+    display: flex;
+    justify-content: center;
+}
+
+input{
+    display: none;
+}
+
+label{
+    width: 340px;
+    /* background-color: green; */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px;
+    border-radius: 10px;
+    /* color: white; */
+}
+
+img{
+    cursor: pointer;
+    margin-top: 20px;
+    margin: 20px;
+    border-color: transparent;
+}
+
+button{
+    border-color: transparent;
+    color: white;
+    background-color: green;
+    border-radius: 10px;
+}
+
+#select-player{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* margin: 20px; */
+}
+
+#paragraph-select-player, #paragraph-select-pc{
+    display: flex;
+    justify-content: center;
+}
+
+#button-attack{
+    display: flex;
+    justify-content: space-evenly;
+    border-color: transparent;
+    color: green;
+}
+
+#button-select-player{
+    display: flex;
+    justify-content: center;
+    border-color: transparent;
+    color: green;
+}
+
+#messages-combat{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}

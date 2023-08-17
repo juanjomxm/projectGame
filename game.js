@@ -2,9 +2,6 @@ function aleatory(min, max){
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
-// let attackPlayer = document.getElementById('paragraph-attack-player')
-// let attackPc = document.getElementById('paragraph-attack-pc')
-
 let attackPlayer
 const attackPlayerText = document.getElementById('paragraph-attack-player')
 
@@ -15,6 +12,7 @@ function selectPlayer(){
     const inputAng = document.getElementById('player-one')
     const inputKatara = document.getElementById('player-two')
     const inputToph = document.getElementById('player-three')
+    const inputZuko = document.getElementById('player-four')
     const pSelectPlayer = document.getElementById('paragraph-select-player')
 
     if(inputAng.checked){
@@ -23,6 +21,8 @@ function selectPlayer(){
         pSelectPlayer.innerText = 'Escogiste a KATARA'
     } else if(inputToph.checked){
         pSelectPlayer.innerText = 'Escogiste a TOPH'
+    } else if(inputZuko.checked){
+        pSelectPlayer.innerText = 'Escogiste a ZUKO'
     } else{
         pSelectPlayer.innerText = 'Debes escoger un jugador'
     }

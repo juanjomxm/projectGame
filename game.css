@@ -1,6 +1,12 @@
+body{
+    background-image: url(https://www.rxwallpaper.site/wp-content/uploads/avatar-the-last-airbender-backgrounds-wallpaper-cave-2-800x800.jpg);
+    background-size: cover
+}
+
 h1, h2, h3{
     display: flex;
     justify-content: center;
+    color: white;
 }
 
 input{
@@ -15,6 +21,7 @@ label{
     flex-wrap: wrap;
     margin: 20px;
     border-radius: 10px;
+    color: white;
     /* color: white; */
 }
 
@@ -30,7 +37,10 @@ button{
     color: white;
     background-color: green;
     border-radius: 10px;
+    margin: 10px;
 }
+
+
 
 #select-player{
     display: flex;
@@ -42,6 +52,7 @@ button{
 #paragraph-select-player, #paragraph-select-pc{
     display: flex;
     justify-content: center;
+    color: white
 }
 
 #button-select-player{
@@ -49,7 +60,6 @@ button{
     justify-content: center;
     border-color: transparent;
     color: green;
-    margin-top: 10px;
 }
 
 #button-attack{
@@ -59,12 +69,37 @@ button{
     color: green;
 }
 
+#combating{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    color: white;
+}
+
+/* butons attack */
+#atack-air{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+#images-combat{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
 #messages-combat{
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
+    color: white
 }
 
 #combat{

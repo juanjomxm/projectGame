@@ -21,13 +21,15 @@
                 height="300"
                 >
             </label>
+            <p id="history-aang"></p>
 
             <input id="player-two" type="radio" name="player">
-            <label for="player-two">KATARA
+            <label id="img-aang" for="player-two">KATARA
                 <img 
                 src="https://th.bing.com/th/id/OIP.kicYAu2gbuXN7R6HkS1yHAHaGq?pid=ImgDet&rs=1"
                 width="300"
                 height="300"
+                onclick="imgAang()"
                 >
             </label>
 
@@ -63,21 +65,40 @@
         <h3>SELECCIONAR ATAQUE</h3>
         
         <div id="button-attack">
-            <button onclick="attackAir()">AIRE CONTROL😶‍🌫️</button>
+            <div id="atack-air">
+                <button onclick="attackAir()">PUÑO DE AIRE😶‍🌫️</button>
+                <button onclick="attackAir2()">FAST TORBELLINO😶‍🌫️</button>
+                <button onclick="attackAir3()">HURACAN😶‍🌫️</button>  
+            </div>
+            <!-- <button onclick="attackAir()">AIRE CONTROL😶‍🌫️</button>
+            <button onclick="attackAir2()">AIRE TIJERA😶‍🌫️</button> Agregando diferentes tipos de ataque -->
+
             <button onclick="attackFire()">FUEGO CONTROL🍁</button>
             <button onclick="attackEarth()">TIERRA CONTROL🪨</button>
             <button onclick="attackWater()">AGUA CONTROL🥏</button>
         </div>
     </section>
 
-    <section id="messages-combat">
+    <section id="combating">
+        <p id="messages-combat-result"></p>
+    </section>
+
+    <section id="images-combat">
         <img 
         id="paragraph-attack-player"
         >
+
+        <p id="versus"></p>
+
         <img 
         id="paragraph-attack-pc"
         >
-        <p id="messages-combat-result"></p>
+    </section>
+
+    <section id="messages-combat">
+        <p id="message-result-final"></p>
+        <p id="lifes-player"></p>
+        <p id="lifes-pc"></p>
     </section>
     
 </body>

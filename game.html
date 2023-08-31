@@ -7,9 +7,9 @@
 </head>
 <body>
 
-    <h1>GAME</h1>
+    <h1>GAME AVATAR</h1>
 
-    <section>
+    <section id="select-player-and-pc">
         <h2>ELIGE EL CAPITAN DE TU EQUIPO</h2>
 
         <div id="select-player">
@@ -21,7 +21,6 @@
                 height="300"
                 >
             </label>
-            <p id="history-aang"></p>
 
             <input id="player-two" type="radio" name="player">
             <label id="img-aang" for="player-two">KATARA
@@ -29,7 +28,6 @@
                 src="https://th.bing.com/th/id/OIP.kicYAu2gbuXN7R6HkS1yHAHaGq?pid=ImgDet&rs=1"
                 width="300"
                 height="300"
-                onclick="imgAang()"
                 >
             </label>
 
@@ -52,15 +50,32 @@
             </label>
         </div>
 
-        <p id="paragraph-select-player"></p>
-        <p id="paragraph-select-pc"></p>
-
         <div id="button-select-player">
             <button onclick="selectPlayer()">SELECT</button>
         </div>
     </section>
-
+    
     <section id="combat">
+
+        <div id="paragraphs-select">
+            <p id="paragraph-select-player"></p>
+            <p id="paragraph-select-pc"></p>
+        </div>
+        
+        <div id="imgs-select-player">
+            <!-- <p id="paragraph-select-player"></p> -->
+            <img id="img-select-player"
+            width="300px"
+            height="300px"
+            />
+
+            <!-- <p id="paragraph-select-pc"></p> -->
+            <img id="img-select-pc"
+            width="300px"
+            height="300px"
+            />
+        </div>
+
         <h2>COMBATE</h2>
         <h3>SELECCIONAR ATAQUE</h3>
         
@@ -70,36 +85,52 @@
                 <button onclick="attackAir2()">FAST TORBELLINO😶‍🌫️</button>
                 <button onclick="attackAir3()">HURACAN😶‍🌫️</button>  
             </div>
-            <!-- <button onclick="attackAir()">AIRE CONTROL😶‍🌫️</button>
-            <button onclick="attackAir2()">AIRE TIJERA😶‍🌫️</button> Agregando diferentes tipos de ataque -->
 
-            <button onclick="attackFire()">FUEGO CONTROL🍁</button>
-            <button onclick="attackEarth()">TIERRA CONTROL🪨</button>
-            <button onclick="attackWater()">AGUA CONTROL🥏</button>
+            <div id="atack-fire">
+                <button onclick="attackFire()">ESPADAS DE FUEGO🍁</button>
+                <button onclick="attackFire2()">FUEGO CELESTIAL🍁</button>
+                <button onclick="attackFire3()">PATADA DEL TARTARO🍁</button>
+            </div>
+
+            <div id="atack-earth">
+                <button onclick="attackEarth()">TRIPLE GOLPE MACIZO🪨</button>
+                <button onclick="attackEarth2()">CHOQUE DE TIERRA🪨</button>
+                <button onclick="attackEarth3()">PUÑO ROCOSO🪨</button>
+            </div>
+
+            <div id="atack-water">
+                <button onclick="attackWater()">EXPULSION ACUATICA🥏</button>
+                <button onclick="attackWater2()">AGUA POISON🥏</button>
+                <button onclick="attackWater3()">MARTILLO MARINO🥏</button>
+            </div>
         </div>
     </section>
 
     <section id="combating">
         <p id="messages-combat-result"></p>
+        <p id="message-result-final"></p>
+        <button id="button-reloaded" onclick="reloaded()">VOLVER A JUGAR</button>
     </section>
 
-    <section id="images-combat">
-        <img 
-        id="paragraph-attack-player"
-        >
+    <section id="images">
+        <div id="images-combat">
+            <img id="img-attack-player">
 
-        <p id="versus"></p>
+            <p id="versus"></p>
 
-        <img 
-        id="paragraph-attack-pc"
-        >
+            <img id="img-attack-pc">
+        </div>
     </section>
 
     <section id="messages-combat">
-        <p id="message-result-final"></p>
+        <!-- <p id="message-result-final"></p> -->
         <p id="lifes-player"></p>
         <p id="lifes-pc"></p>
     </section>
+
+    <!-- <section id="section-reload">
+        <button onclick="reloaded()">VOLVER A JUGAR</button>
+    </section> -->
     
 </body>
 <script src="./game.js"></script>

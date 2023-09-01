@@ -25,7 +25,7 @@ const imgSelectPlayer = [
     {name: 'AANG', src: 'https://th.bing.com/th/id/R.27f08d59924bf6c3ea96b4588f88b501?rik=xGqSki4BXxDEUA&riu=http%3a%2f%2fwww.absoluteanime.com%2favatar_the_last_airbender%2faang%5b2%5d.jpg&ehk=wxPH2H8TgNuwzWsYOVAHxgnuNzPVtWni4lWKMCxkYHk%3d&risl=&pid=ImgRaw&r=0'},
     {name: 'KATARA', src: 'https://th.bing.com/th/id/OIP.kicYAu2gbuXN7R6HkS1yHAHaGq?pid=ImgDet&rs=1'},
     {name: 'TOPH', src: 'https://static3.srcdn.com/wordpress/wp-content/uploads/2020/01/Toph-Avatar-Featured.jpg'},
-    {name: 'ZUKO', src: 'https://th.bing.com/th/id/R.97ccd05a8a6f90c803ee79bf0be2fe1c?rik=y1o1LnC2%2f8nlEQ&pid=ImgRaw&r=0'}
+    {name: 'ZUKO', src: 'https://i.pinimg.com/736x/ab/45/53/ab4553ea89f942cd93d402212d6502da--zuko-avatar.jpg'}
 ]
 
 
@@ -48,16 +48,15 @@ function selectPlayer(){
             return item.name.includes('AANG')
         })
         .map(item=>{
-            paragraphSelectPlayer.innerText = 'PLAYER'
+            paragraphSelectPlayer.innerText = 'JUGADOR'
             pSelectPlayer.src = item.src
         })
-        // pSelectPlayer.innerText = 'ESCOGISTE A AANG'
     } else if(inputKatara.checked){
         imgSelectPlayer.filter(item =>{
             return item.name.includes('KATARA')
         })
         .map(item=>{
-            paragraphSelectPlayer.innerText = 'PLAYER'
+            paragraphSelectPlayer.innerText = 'JUGADOR'
             pSelectPlayer.src = item.src
         })   
     } else if(inputToph.checked){
@@ -65,7 +64,7 @@ function selectPlayer(){
             return item.name.includes('TOPH')
         })
         .map(item=>{
-            paragraphSelectPlayer.innerText = 'PLAYER'
+            paragraphSelectPlayer.innerText = 'JUGADOR'
             pSelectPlayer.src = item.src
         })
     } else if(inputZuko.checked){
@@ -73,7 +72,7 @@ function selectPlayer(){
             return item.name.includes('ZUKO')
         })
         .map(item=>{
-            paragraphSelectPlayer.innerText = 'PLAYER'
+            paragraphSelectPlayer.innerText = 'JUGADOR'
             pSelectPlayer.src = item.src
         })
     } else{
@@ -123,7 +122,7 @@ function selectPlayerPc(){
 }
 
 const imgsAttacks = [
-    {name: 'air-control', src: 'https://th.bing.com/th/id/R.cbf38fb715dcc27f760f34ed022cf041?rik=q9Ti412YPC1DyQ&pid=ImgRaw&r=0', src2: 'https://78.media.tumblr.com/tumblr_m8z4fpDTFS1rnryvao1_500.gif', src3:'https://media0.giphy.com/media/Kct9Or59JmTr1AhCVR/giphy.gif?cid=ecf05e47hvb81pv0kwzefyqmg7cc1tzubir79oskksy58i2q&ep=v1_gifs_search&rid=giphy.gif&ct=g' },
+    {name: 'air', src: 'https://th.bing.com/th/id/R.cbf38fb715dcc27f760f34ed022cf041?rik=q9Ti412YPC1DyQ&pid=ImgRaw&r=0', src2: 'https://78.media.tumblr.com/tumblr_m8z4fpDTFS1rnryvao1_500.gif', src3:'https://media0.giphy.com/media/Kct9Or59JmTr1AhCVR/giphy.gif?cid=ecf05e47hvb81pv0kwzefyqmg7cc1tzubir79oskksy58i2q&ep=v1_gifs_search&rid=giphy.gif&ct=g' },
 
     {name: 'fire', src: 'https://media.giphy.com/media/a3BSVQ00oj2kU/giphy.gif', srcfire2: 'https://pa1.narvii.com/6958/bae37aaff7c56f557c68022516722229c7b17338r1-370-188_hq.gif', srcfire3: 'https://th.bing.com/th/id/R.9cf038f4a77c1cfbde5950d45cf3f229?rik=Y%2buTFDz4uw00AA&riu=http%3a%2f%2fpa1.narvii.com%2f7071%2f7bd6edae020f987090e717f727210701d791a20ar1-245-245_00.gif&ehk=ZUx8oFq9a%2bxwKhb%2fYnjuaW8dLLcwHPPa17rnH4ulkcI%3d&risl=&pid=ImgRaw&r=0'},
 
@@ -141,7 +140,7 @@ function attackAir(){
     attackPlayerText.width = 600
     attackPlayerText.height = 400
     imgsAttacks.filter(item => {
-        return item.name.includes('air-control')
+        return item.name.includes('air')
     })
     .map(item =>{
         return attackPlayerText.src = item.src
@@ -154,7 +153,7 @@ function attackAir2(){
     attackPlayerText.width = 600
     attackPlayerText.height = 400
     imgsAttacks.filter(item => {
-        return item.name.includes('air-control')
+        return item.name.includes('air')
     })
     .map(item =>{
         return attackPlayerText.src = item.src2
@@ -167,7 +166,7 @@ function attackAir3(){
     attackPlayerText.width = 600
     attackPlayerText.height = 400
     imgsAttacks.filter(item => {
-        return item.name.includes('air-control')
+        return item.name.includes('air')
     })
     .map(item =>{
         return attackPlayerText.src = item.src3
@@ -307,7 +306,7 @@ function selectAttackPc(){
             attackPcText.width = 600
             attackPcText.height = 400
             imgsAttacks.filter(item => {
-                return item.name.includes('air-control')
+                return item.name.includes('air')
             })
             .map(item =>{
                 switch(imgAleatory){

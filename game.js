@@ -19,6 +19,10 @@ function initGame(){
 
     let sectionReloaded = document.getElementById('button-reloaded')
     sectionReloaded.style.display = 'none'
+
+    let sectionImages = document.getElementById('images')
+    sectionImages.style.display = 'none'
+
 }
 
 const imgSelectPlayer = [
@@ -76,7 +80,11 @@ function selectPlayer(){
             pSelectPlayer.src = item.src
         })
     } else{
-        pSelectPlayer.innerText = 'DEBES ESCOGER UN JUGADOR'
+        paragraphSelectPlayer.innerText = 'JUGADOR'
+        const sectionSelectPlayer = document.getElementById('select-player-and-pc')
+        sectionSelectPlayer.style.display = 'block'
+        let sectionSelectAtack = document.querySelector('#combat')
+        sectionSelectAtack.style.display = 'none'
     }
     selectPlayerPc()
 }
@@ -300,6 +308,8 @@ function attackWater3(){
 function selectAttackPc(){
     const attackAleatory = aleatory(1,4)
     const imgAleatory = aleatory(1,3)
+    let sectionImages = document.getElementById('images')
+    sectionImages.style.display = 'block'
 
         if(attackAleatory === 1){
             attackPc = 'AIRE'
@@ -389,7 +399,7 @@ function selectAttackPc(){
 function combatFinal(){
     const lifesPlayerText = document.getElementById('lifes-player')
     const lifesPcText = document.getElementById('lifes-pc')
-
+    
     if(attackPlayer == attackPc){
         pResultFinal.innerHTML = 'EMPATE'
 

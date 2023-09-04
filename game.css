@@ -66,6 +66,7 @@ button{
     background-color: cadetblue;
     border-radius: 10px;
     margin: 10px;
+    cursor: pointer;
 }
 
 #versus{
@@ -149,6 +150,15 @@ button{
     margin-top: 20px;
     align-items: center;
     justify-content: center;
+}
+
+#img-attack-player{
+    width: 500px;
+    height: 500px;
+}
+#img-attack-pc{
+    width: 500px;
+    height: 500px;
 }
 
 #messages-combat{
